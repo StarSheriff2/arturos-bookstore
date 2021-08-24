@@ -6,23 +6,24 @@ import {
 
 import Header from './header';
 import Bookstore from './bookstore';
+import Categories from '../pages/Categories';
 
 function App() {
   return (
     <>
       <Router>
-          <div className="App">
-            <Header />
-            <Switch>
-              <Route exact path="/">
-                <Bookstore />
-              </Route>
-              <Route path="/Category">
-
-              </Route>
-            </Switch>
-          </div>
-        </Router>
+        <div className="App">
+          <Header />
+          <Switch>
+            <Route exact path="/">
+              <Bookstore />
+            </Route>
+            <Route path="/Categories">
+              <Categories />
+            </Route>
+          </Switch>
+        </div>
+      </Router>
     </>
   );
 }

@@ -1,7 +1,7 @@
 const AddBookForm = () => (
   <>
     <form action="#" className="add-book-form">
-      <input type="text" placeholder="Book title"/>
+      <input type="text" placeholder="Book title" />
       <select name="book-category" id="book-category">
         <option value="" disabled selected hidden>Category</option>
         <option value="action">action</option>
