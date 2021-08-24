@@ -1,3 +1,20 @@
+import { useDispatch } from 'react-redux';
+
+import { addBook } from './redux/books/books';
+
+import { v4 as uuidv4 } from "uuid";
+
+const dispatch = useDispatch();
+
+const submitBookToStore = () => {
+  const newBook = {
+      id: uuidv4(),
+      title,
+      author
+  }
+  dispatch(addBook(newBook));
+}
+
 const AddBookForm = () => (
   <>
     <form action="#" className="add-book-form">
@@ -8,7 +25,7 @@ const AddBookForm = () => (
         <option value="science fiction">science fiction</option>
         <option value="economy">economy</option>
       </select>
-      <button type="submit">Add book</button>
+      <button type="submit" onClick={submitBookToStore}>Add book</button>
     </form>
   </>
 );

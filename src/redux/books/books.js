@@ -6,12 +6,12 @@ const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 const initialState = [];
 
 // Action Creators
-const addBook = payload => ({
+export const addBook = payload => ({
   type: ADD_BOOK,
   payload
 });
 
-const removeBook = payload => ({
+export const removeBook = payload => ({
   type: REMOVE_BOOK,
   payload
 });
