@@ -19,12 +19,12 @@ ProgressGraph.defaultProps = {
   progress: {
     completion: null,
   },
-  completion: null,
 };
 
 ProgressGraph.propTypes = {
-  progress: PropTypes.shape,
-  completion: PropTypes.number,
+  progress: PropTypes.shape({
+    completion: PropTypes.number,
+  }),
 };
 
 export default ProgressGraph;

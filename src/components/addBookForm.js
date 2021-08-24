@@ -7,13 +7,16 @@ const AddBookForm = () => {
 
   const submitBookToStore = (event) => {
     event.preventDefault();
-    /* const newBook = {
-        id: uuidv4(),
-        title,
-        author
-    } */
-    console.log(event);
-    // dispatch(addBook(newBook));
+    const title = event.target[0].value;
+    const author = null;
+    event.target.reset();
+    const newBook = {
+      id: uuidv4(),
+      title,
+      author,
+    };
+
+    dispatch(addBook(newBook));
   };
 
   return (
@@ -21,7 +24,6 @@ const AddBookForm = () => {
       <form action="#" className="add-book-form" onSubmit={submitBookToStore}>
         <input type="text" placeholder="Book title" required />
         <select name="book-category" id="book-category">
-          <option value="" disabled selected hidden>Category</option>
           <option value="action">action</option>
           <option value="science fiction">science fiction</option>
           <option value="economy">economy</option>

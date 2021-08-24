@@ -14,11 +14,19 @@ const Book = (props) => {
 };
 
 Book.defaultProps = {
-  bookData: null,
+  bookData: {
+    title: null,
+    author: null,
+    category: null,
+  },
 };
 
 Book.propTypes = {
-  bookData: PropTypes.shape,
+  bookData: PropTypes.shape({
+    title: PropTypes.string,
+    author: PropTypes.string,
+    category: PropTypes.string,
+  }),
 };
 
 export default Book;

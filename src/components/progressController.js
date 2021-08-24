@@ -33,14 +33,13 @@ ProgressController.defaultProps = {
     chapterNumber: null,
     chapterTitle: null,
   },
-  chapterNumber: null,
-  chapterTitle: null,
 };
 
 ProgressController.propTypes = {
-  progress: PropTypes.shape,
-  chapterNumber: PropTypes.number,
-  chapterTitle: PropTypes.string,
+  progress: PropTypes.shape({
+    chapterNumber: PropTypes.number,
+    chapterTitle: PropTypes.string,
+  }),
 };
 
 export default ProgressController;

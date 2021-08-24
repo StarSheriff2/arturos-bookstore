@@ -31,7 +31,18 @@ BookCard.defaultProps = {
 };
 
 BookCard.propTypes = {
-  book: PropTypes.shape,
+  book: PropTypes.shape({
+    titleInfo: PropTypes.shape({
+      title: PropTypes.string,
+      author: PropTypes.string,
+      category: PropTypes.string,
+    }),
+    progress: PropTypes.shape({
+      chapterNumber: PropTypes.number,
+      chapterTitle: PropTypes.string,
+      completion: PropTypes.number,
+    }),
+  }),
 };
 
 export default BookCard;

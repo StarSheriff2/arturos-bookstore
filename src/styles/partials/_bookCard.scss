@@ -9,16 +9,16 @@
   padding: 1rem;
 
   &__progress-graph-container {
-    @include d-flex(row, start, center);
+    @include d-flex(row, flex-start, center);
 
     &__progress-percentage {
-      @include d-flex(column, center, start);
+      @include d-flex(column, center, flex-start);
     }
   }
 
   &__progress-controller {
     display: grid;
-    justify-items: start;
+    justify-items: flex-start;
 
     &__btn {
       margin: 1rem 0;
