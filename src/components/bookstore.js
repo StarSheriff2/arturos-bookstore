@@ -1,4 +1,4 @@
-import react, { useState } from 'react';
+import React, { useState } from 'react';
 import AddBookForm from './addBookForm';
 import BookCard from './bookCard';
 
@@ -7,9 +7,9 @@ const Bookstore = () => {
     bookList: [
       {
         titleInfo: {
-          title: "The Hunger Games",
-          author: "Suzanne Collins",
-          category: "action",
+          title: 'The Hunger Games',
+          author: 'Suzanne Collins',
+          category: 'action',
         },
         progress: {
           chapterNumber: 17,
@@ -19,31 +19,38 @@ const Bookstore = () => {
       },
       {
         titleInfo: {
-          title: "Dune",
-          author: "Frank Herbert",
-          category: "science fiction",
+          title: 'Dune',
+          author: 'Frank Herbert',
+          category: 'science fiction',
         },
         progress: {
           chapterNumber: 3,
-          chapterTitle: "A Lesson Learned",
+          chapterTitle: 'A Lesson Learned',
           completion: 0.8,
         },
       },
       {
         titleInfo: {
-          title: "Capital in the 21st Century",
-          author: "Suzanne Collins",
-          category: "economy",
+          title: 'Capital in the 21st Century',
+          author: 'Suzanne Collins',
+          category: 'economy',
         },
         progress: {
           chapterNumber: null,
-          chapterTitle: "Introduction",
+          chapterTitle: 'Introduction',
           completion: 0,
         },
-      }
-    ]
+      },
+    ],
   };
+
   const [bookstore, setBookstore] = useState(initialObj);
+
+  const addBook = (newBook) => setBookstore((bookStore) => {
+    const { bookList } = bookStore;
+
+    return { bookList: bookList.concat(newBook) };
+  });
 
   return (
     <>
@@ -51,22 +58,22 @@ const Bookstore = () => {
         <h2 className="hidden">Books Collection</h2>
         <ul className="bookList">
           <li className="book-card">
-            <BookCard book={bookstore.bookList[0]}/>
+            <BookCard book={bookstore.bookList[0]} />
           </li>
           <li className="book-card">
-            <BookCard book={bookstore.bookList[1]}/>
+            <BookCard book={bookstore.bookList[1]} />
           </li>
           <li className="book-card">
-            <BookCard book={bookstore.bookList[2]}/>
+            <BookCard book={bookstore.bookList[2]} />
           </li>
         </ul>
       </section>
       <section className="add-book-section page-section">
         <h2>Add New Book</h2>
-        <AddBookForm />
+        <AddBookForm addBook={addBook} />
       </section>
     </>
   );
-}
+};
 
 export default Bookstore;
