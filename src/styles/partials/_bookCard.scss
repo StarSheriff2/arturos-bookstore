@@ -1,0 +1,22 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.book-card {
+  display: grid;
+  grid-template-columns: 5fr 2fr 3fr;
+  align-items: center;
+  background-color: $white;
+  border: blue solid 2px;
+}
+
+.h2 {
+  color: pink;
+}
+
+/* @mixin d-flex ($direction: row, $jc: flex-start, $ai: flex-start, $wrapping: nowrap) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $jc;
+  align-items: $ai;
+  flex-wrap: $wrapping;
+} */
