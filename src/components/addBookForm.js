@@ -1,6 +1,6 @@
 const AddBookForm = () => (
   <>
-    <form action="#">Form</form>
+    <form action="#" className="add-book-form">Form</form>
   </>
 );
 
