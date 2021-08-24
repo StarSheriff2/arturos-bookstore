@@ -2,4 +2,8 @@
 @import '../abstracts/variables';
 @import '../partials/bookCard';
 
-
+.bookList {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-gap: 1.4rem;
+}

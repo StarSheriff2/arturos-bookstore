@@ -2,7 +2,7 @@ import react from 'react';
 
 const BookActions = (props) => {
   return (
-    <ul>
+    <ul className="book-actions">
       <li>Comments</li>
       <li>Remove</li>
       <li>Edit</li>
