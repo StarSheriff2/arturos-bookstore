@@ -1,0 +1,11 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+@import '../partials/header';
+@import '../partials/bookCard';
+@import '../partials/addBookForm';
+
+.bookList {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-gap: 1.4rem;
+}

@@ -1,0 +1,10 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+@import './navbar';
+
+.header {
+  @include d-flex(row, space-between, center);
+
+  border: blue solid 2px;
+  padding: 2rem;
+}

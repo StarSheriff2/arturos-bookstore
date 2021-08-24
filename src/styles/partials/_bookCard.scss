@@ -1,0 +1,57 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+
+.book-card {
+  display: grid;
+  align-items: center;
+  background-color: $white;
+  border: blue solid 2px;
+  padding: 1rem;
+
+  &__progress-graph-container {
+    @include d-flex(row, start, center);
+
+    &__progress-percentage {
+      @include d-flex(column, center, start);
+    }
+  }
+
+  &__progress-controller {
+    display: grid;
+    justify-items: start;
+
+    &__btn {
+      margin: 1rem 0;
+    }
+  }
+}
+
+.book {
+  padding: 1rem 0;
+}
+
+.book-actions {
+  @include d-flex(row, flex-start, center);
+}
+
+.progress-percentage {
+  display: inline-block;
+}
+
+/*
+  ========================
+
+  Media Queries
+
+  ========================
+*/
+
+/* Large devices (laptops/desktops, 769px and up) */
+
+@media only screen and (min-width: 769px) {
+  .book-card {
+    grid-template-columns: 5fr 2fr 3fr;
+    align-items: center;
+    padding: 1rem;
+  }
+}

@@ -1,0 +1,21 @@
+@import '../abstracts/fonts';
+
+h1 {
+  font: italic bold 5rem $font-family;
+}
+
+h2 {
+  font: 500 3rem $font-family;
+}
+
+h3 {
+  font: 500 2rem $font-family;
+}
+
+h4 {
+  font: 1.6rem $font-family;
+}
+
+p {
+  font: 400 1rem $font-family;
+}

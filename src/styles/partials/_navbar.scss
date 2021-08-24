@@ -1,0 +1,7 @@
+.navbar__links {
+  @include d-flex(row, space-between, center);
+
+  &__li {
+    margin-right: 2rem;
+  }
+}
