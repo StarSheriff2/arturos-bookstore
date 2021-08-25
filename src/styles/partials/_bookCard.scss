@@ -32,6 +32,24 @@
 
 .book-actions {
   @include d-flex(row, flex-start, center);
+
+  &__action {
+    color: green;
+
+    &:nth-child(1) {
+      padding-right: 1rem;
+    }
+
+    &:nth-child(2) {
+      padding: 0.8rem calc(1rem + 2px);
+      border-left: green 2px solid;
+      border-right: green 2px solid;
+    }
+
+    &:nth-child(3) {
+      padding-left: 1rem;
+    }
+  }
 }
 
 .progress-percentage {

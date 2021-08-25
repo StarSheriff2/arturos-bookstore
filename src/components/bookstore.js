@@ -30,7 +30,6 @@ const Bookstore = () => {
     <>
       <section className="books-section page-section">
         <h2 className="hidden">Books Collection</h2>
-
         <ul className="bookList">
           { content }
         </ul>

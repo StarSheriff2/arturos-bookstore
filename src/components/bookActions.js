@@ -1,8 +1,8 @@
 const BookActions = () => (
   <ul className="book-actions">
-    <li>Comments</li>
-    <li>Remove</li>
-    <li>Edit</li>
+    <li className="book-actions__action">Comments</li>
+    <li className="book-actions__action">Remove</li>
+    <li className="book-actions__action">Edit</li>
   </ul>
 );
 
