@@ -26,15 +26,11 @@ const BookCard = (props) => {
   );
 };
 
-BookCard.defaultProps = {
-  book: null,
-};
-
 BookCard.propTypes = {
   book: PropTypes.shape({
     titleInfo: PropTypes.shape({
       id: PropTypes.string.isRequired,
-      title: PropTypes.string,
+      title: PropTypes.string.isRequired,
       author: PropTypes.string,
       category: PropTypes.string,
     }),
@@ -43,7 +39,7 @@ BookCard.propTypes = {
       chapterTitle: PropTypes.string,
       completion: PropTypes.number,
     }),
-  }),
+  }).isRequired,
 };
 
 export default BookCard;

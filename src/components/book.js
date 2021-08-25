@@ -13,20 +13,12 @@ const Book = (props) => {
   );
 };
 
-Book.defaultProps = {
-  bookData: {
-    title: null,
-    author: null,
-    category: null,
-  },
-};
-
 Book.propTypes = {
   bookData: PropTypes.shape({
-    title: PropTypes.string,
+    title: PropTypes.string.isRequired,
     author: PropTypes.string,
     category: PropTypes.string,
-  }),
+  }).isRequired,
 };
 
 export default Book;

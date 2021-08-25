@@ -5,7 +5,7 @@
   display: grid;
   align-items: center;
   background-color: $white;
-  border: blue solid 2px;
+  border: $primary solid 2px;
   padding: 1rem;
 
   &__progress-graph-container {
