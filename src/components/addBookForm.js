@@ -31,7 +31,7 @@ const AddBookForm = () => {
 
   return (
     <>
-      <form action="#" className="add-book-form" onSubmit={submitBookToStore}>
+      <form action="POST" className="add-book-form" onSubmit={submitBookToStore}>
         <input type="text" placeholder="Book title" required />
         <select name="book-category" id="book-category">
           <option value="action">action</option>

@@ -28,7 +28,7 @@ const BookActions = (props) => {
 };
 
 BookActions.propTypes = {
-  bookId: PropTypes.number.isRequired,
+  bookId: PropTypes.string.isRequired,
 };
 
 export default BookActions;

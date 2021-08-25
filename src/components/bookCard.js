@@ -33,7 +33,7 @@ BookCard.defaultProps = {
 BookCard.propTypes = {
   book: PropTypes.shape({
     titleInfo: PropTypes.shape({
-      id: PropTypes.number.isRequired,
+      id: PropTypes.string.isRequired,
       title: PropTypes.string,
       author: PropTypes.string,
       category: PropTypes.string,

@@ -7,7 +7,7 @@ const initialState = {
   bookList: [
     {
       titleInfo: {
-        id: 1,
+        id: '1',
         title: 'The Hunger Games',
         author: 'Suzanne Collins',
         category: 'action',
@@ -20,7 +20,7 @@ const initialState = {
     },
     {
       titleInfo: {
-        id: 2,
+        id: '2',
         title: 'Dune',
         author: 'Frank Herbert',
         category: 'science fiction',
@@ -33,7 +33,7 @@ const initialState = {
     },
     {
       titleInfo: {
-        id: 3,
+        id: '3',
         title: 'Capital in the 21st Century',
         author: 'Suzanne Collins',
         category: 'economy',

@@ -6,14 +6,6 @@ import BookCard from './bookCard';
 const Bookstore = () => {
   const bookList = useSelector((state) => state.booksReducer.bookList, shallowEqual);
 
-  // const [bookstore, setBookstore] = useState(initialObj);
-
-  /* const addBook = (newBook) => setBookstore((bookStore) => {
-    const { bookList } = bookStore;
-
-    return { bookList: bookList.concat(newBook) };
-  }); */
-
   let content;
 
   if (bookList.length === 0) {
