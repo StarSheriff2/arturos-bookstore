@@ -7,8 +7,12 @@ const currentChapterInfo = (num, title) => {
   if (num) {
     return `Chapter ${num}`;
   }
-  return `${title}`;
+  if (title) {
+    return `${title}`;
+  }
+  return '';
 };
+
 const ProgressController = (props) => {
   const { progress } = props;
   const { chapterNumber, chapterTitle } = progress;
@@ -33,14 +37,13 @@ ProgressController.defaultProps = {
     chapterNumber: null,
     chapterTitle: null,
   },
-  chapterNumber: null,
-  chapterTitle: null,
 };
 
 ProgressController.propTypes = {
-  progress: PropTypes.shape,
-  chapterNumber: PropTypes.number,
-  chapterTitle: PropTypes.string,
+  progress: PropTypes.shape({
+    chapterNumber: PropTypes.number,
+    chapterTitle: PropTypes.string,
+  }),
 };
 
 export default ProgressController;

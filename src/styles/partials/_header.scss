@@ -3,8 +3,14 @@
 @import './navbar';
 
 .header {
-  @include d-flex(row, space-between, center);
+  background-color: $primary;
 
-  border: blue solid 2px;
-  padding: 2rem;
+  &__sub-container {
+    @include d-flex(row, space-between, center);
+
+    max-width: 1600px;
+    margin: 0 auto;
+    color: $white;
+    padding: 2rem;
+  }
 }

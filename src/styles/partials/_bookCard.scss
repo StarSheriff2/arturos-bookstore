@@ -5,20 +5,20 @@
   display: grid;
   align-items: center;
   background-color: $white;
-  border: blue solid 2px;
+  border: $primary solid 2px;
   padding: 1rem;
 
   &__progress-graph-container {
-    @include d-flex(row, start, center);
+    @include d-flex(row, flex-start, center);
 
     &__progress-percentage {
-      @include d-flex(column, center, start);
+      @include d-flex(column, center, flex-start);
     }
   }
 
   &__progress-controller {
     display: grid;
-    justify-items: start;
+    justify-items: flex-start;
 
     &__btn {
       margin: 1rem 0;
@@ -32,6 +32,29 @@
 
 .book-actions {
   @include d-flex(row, flex-start, center);
+
+  &__action {
+    &:nth-child(1) {
+      padding-right: 1rem;
+    }
+
+    &:nth-child(2) {
+      padding: 0.8rem calc(1rem + 2px);
+      border-left: green 2px solid;
+      border-right: green 2px solid;
+    }
+
+    &:nth-child(3) {
+      padding-left: 1rem;
+    }
+
+    &__btn {
+      background-color: transparent;
+      color: green;
+      padding: 0;
+      font-size: 1.4rem;
+    }
+  }
 }
 
 .progress-percentage {

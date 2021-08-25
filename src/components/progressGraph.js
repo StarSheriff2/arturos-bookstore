@@ -17,14 +17,14 @@ const ProgressGraph = (props) => {
 
 ProgressGraph.defaultProps = {
   progress: {
-    completion: null,
+    completion: 0,
   },
-  completion: null,
 };
 
 ProgressGraph.propTypes = {
-  progress: PropTypes.shape,
-  completion: PropTypes.number,
+  progress: PropTypes.shape({
+    completion: PropTypes.number,
+  }),
 };
 
 export default ProgressGraph;

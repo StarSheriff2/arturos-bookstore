@@ -3,9 +3,11 @@ import Login from './login';
 
 const Header = () => (
   <header className="header">
-    <h1 className="main-title">Bookstore CMS</h1>
-    <Navbar />
-    <Login />
+    <div className="header__sub-container">
+      <h1 className="main-title">Bookstore CMS</h1>
+      <Navbar />
+      <Login />
+    </div>
   </header>
 );
 
