@@ -17,7 +17,7 @@ const ProgressGraph = (props) => {
 
 ProgressGraph.defaultProps = {
   progress: {
-    completion: null,
+    completion: 0,
   },
 };
 

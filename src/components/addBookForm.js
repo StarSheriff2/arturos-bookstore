@@ -22,7 +22,7 @@ const AddBookForm = () => {
       progress: {
         chapterNumber: null,
         chapterTitle: null,
-        completion: null,
+        completion: 0,
       },
     };
 
@@ -33,7 +33,7 @@ const AddBookForm = () => {
     <>
       <form action="POST" className="add-book-form" onSubmit={submitBookToStore}>
         <input type="text" placeholder="Book title" required />
-        <select name="book-category" id="book-category">
+        <select name="book-category" id="book-category" className="add-book-form__dropdown">
           <option value="action">action</option>
           <option value="science fiction">science fiction</option>
           <option value="economy">economy</option>

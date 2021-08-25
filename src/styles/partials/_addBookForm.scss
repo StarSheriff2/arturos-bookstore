@@ -1,8 +1,16 @@
 .add-book-form {
+  display: grid;
+  grid-template-columns: 5fr 2fr 1fr;
+  grid-gap: 3rem;
+  align-items: stretch;
   border: blue solid 2px;
   padding: 2rem;
 
   & input[type=text] {
     font-size: 2rem;
+  }
+
+  &__dropdown {
+    height: 100%;
   }
 }
