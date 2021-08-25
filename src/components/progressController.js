@@ -12,6 +12,7 @@ const currentChapterInfo = (num, title) => {
   }
   return '';
 };
+
 const ProgressController = (props) => {
   const { progress } = props;
   const { chapterNumber, chapterTitle } = progress;

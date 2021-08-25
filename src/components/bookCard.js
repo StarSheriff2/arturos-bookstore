@@ -14,7 +14,7 @@ const BookCard = (props) => {
     <>
       <div className="book-card__book-container">
         <Book bookData={titleInfo} />
-        <BookActions />
+        <BookActions bookId={titleInfo.id} />
       </div>
       <div className="book-card__progress-graph-container">
         <ProgressGraph progress={progress} />
@@ -33,6 +33,7 @@ BookCard.defaultProps = {
 BookCard.propTypes = {
   book: PropTypes.shape({
     titleInfo: PropTypes.shape({
+      id: PropTypes.number.isRequired,
       title: PropTypes.string,
       author: PropTypes.string,
       category: PropTypes.string,

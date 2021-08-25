@@ -34,8 +34,6 @@
   @include d-flex(row, flex-start, center);
 
   &__action {
-    color: green;
-
     &:nth-child(1) {
       padding-right: 1rem;
     }
@@ -48,6 +46,13 @@
 
     &:nth-child(3) {
       padding-left: 1rem;
+    }
+
+    &__btn {
+      background-color: transparent;
+      color: green;
+      padding: 0;
+      font-size: 1.4rem;
     }
   }
 }
