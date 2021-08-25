@@ -71,3 +71,27 @@ const reducer = (state = initialState, action) => {
 };
 
 export default reducer;
+
+// API Stuff
+/*
+
+App id: DtCeReylHfRRGmnkWwvK
+
+Create Book:
+https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/DtCeReylHfRRGmnkWwvK/books/
+
+1st book:
+{
+    "item_id": "jXX988cjjsdi",
+    "title": "House of Suns",
+    "category": "Science Fiction"
+}
+
+Get books:
+
+https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/DtCeReylHfRRGmnkWwvK/books/
+
+Delete book (Use DELETE in action)
+
+https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/DtCeReylHfRRGmnkWwvK/books/jXX988cjjsdi
+*/
