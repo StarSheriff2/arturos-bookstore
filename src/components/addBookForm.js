@@ -8,12 +8,22 @@ const AddBookForm = () => {
   const submitBookToStore = (event) => {
     event.preventDefault();
     const title = event.target[0].value;
+    const category = event.target[1].value;
     const author = null;
     event.target.reset();
+
     const newBook = {
-      id: uuidv4(),
-      title,
-      author,
+      titleInfo: {
+        id: uuidv4(),
+        title,
+        author,
+        category,
+      },
+      progress: {
+        chapterNumber: null,
+        chapterTitle: null,
+        completion: null,
+      },
     };
 
     dispatch(addBook(newBook));

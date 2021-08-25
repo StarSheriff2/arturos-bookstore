@@ -7,7 +7,10 @@ const currentChapterInfo = (num, title) => {
   if (num) {
     return `Chapter ${num}`;
   }
-  return `${title}`;
+  if (title) {
+    return `${title}`;
+  }
+  return '';
 };
 const ProgressController = (props) => {
   const { progress } = props;
