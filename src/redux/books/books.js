@@ -1,66 +1,98 @@
 // Actions
 const ADD_BOOK = 'bookStore/books/ADD_BOOK';
+const BOOKS_SUCCESS = 'BOOKS_SUCCESS';
+const BOOKS_FAILURE = 'BOOKS_FAILURE';
 const REMOVE_BOOK = 'bookStore/books/REMOVE_BOOK';
 
+// API
+const baseURL = 'https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/apps/DtCeReylHfRRGmnkWwvK/';
+
 // Initial State
+
 const initialState = {
-  bookList: [
-    {
-      titleInfo: {
-        id: '1',
-        title: 'The Hunger Games',
-        author: 'Suzanne Collins',
-        category: 'action',
-      },
-      progress: {
-        chapterNumber: 17,
-        chapterTitle: null,
-        completion: 0.65,
-      },
-    },
-    {
-      titleInfo: {
-        id: '2',
-        title: 'Dune',
-        author: 'Frank Herbert',
-        category: 'science fiction',
-      },
-      progress: {
-        chapterNumber: 3,
-        chapterTitle: 'A Lesson Learned',
-        completion: 0.8,
-      },
-    },
-    {
-      titleInfo: {
-        id: '3',
-        title: 'Capital in the 21st Century',
-        author: 'Suzanne Collins',
-        category: 'economy',
-      },
-      progress: {
-        chapterNumber: null,
-        chapterTitle: 'Introduction',
-        completion: 0,
-      },
-    },
-  ],
+  bookList: [],
 };
 
 // Action Creators
+export const booksSuccess = (payload) => ({
+  type: BOOKS_SUCCESS,
+  payload,
+});
+
+export const fetchBooks = () => async (dispatch) => {
+  const response = await fetch(`${baseURL}books/`, {
+  });
+  const responseStatus = await response.ok;
+  if (responseStatus) {
+    const books = await response.json();
+    return dispatch(booksSuccess(books));
+  }
+  return dispatch(BOOKS_FAILURE());
+};
+
 export const addBook = (payload) => ({
   type: ADD_BOOK,
   payload,
 });
+
+export const addBooktoAPI = (payload) => async (dispatch) => {
+  const response = await fetch(`${baseURL}books/`, {
+    method: 'POST',
+    body: JSON.stringify({
+      item_id: payload.titleInfo.id,
+      title: payload.titleInfo.title,
+      category: payload.titleInfo.category,
+    }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  const responseStatus = await response.ok;
+  if (responseStatus) {
+    return dispatch(addBook(payload));
+  }
+  return dispatch(BOOKS_FAILURE());
+};
 
 export const removeBook = (payload) => ({
   type: REMOVE_BOOK,
   payload,
 });
 
+export const removeBookFromAPI = (payload) => async (dispatch) => {
+  const response = await fetch(`${baseURL}books/${payload}`, {
+    method: 'DELETE',
+  });
+  const responseStatus = await response.ok;
+  if (responseStatus) {
+    return dispatch(removeBook(payload));
+  }
+  return dispatch(BOOKS_FAILURE());
+};
+
 // Reducer
 const reducer = (state = initialState, action) => {
   switch (action.type) {
+    case BOOKS_SUCCESS:
+      return {
+        bookList: Object.keys(action.payload).map((key) => (
+          {
+            titleInfo: {
+              id: key,
+              title: action.payload[key][0].title,
+              author: null,
+              category: action.payload[key][0].category,
+            },
+            progress: {
+              chapterNumber: null,
+              chapterTitle: null,
+              completion: 0,
+            },
+          }
+        )),
+      };
+    case BOOKS_FAILURE:
+      return state;
     case ADD_BOOK:
       return { bookList: [...state.bookList, action.payload] };
     case REMOVE_BOOK:

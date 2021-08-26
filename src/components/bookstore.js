@@ -1,9 +1,16 @@
-import React from 'react';
-import { useSelector, shallowEqual } from 'react-redux';
+import React, { useEffect } from 'react';
+import { useDispatch, useSelector, shallowEqual } from 'react-redux';
+import { fetchBooks } from '../redux/books/books';
 import AddBookForm from './addBookForm';
 import BookCard from './bookCard';
 
 const Bookstore = () => {
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    dispatch(fetchBooks());
+  }, []);
+
   const bookList = useSelector((state) => state.booksReducer.bookList, shallowEqual);
 
   let content;
