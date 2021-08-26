@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books';
+import { removeBookFromAPI } from '../redux/books/books';
 
 const BookActions = (props) => {
   const dispatch = useDispatch();
@@ -9,7 +9,7 @@ const BookActions = (props) => {
   const { bookId } = props;
 
   const removeBookFromStore = () => {
-    dispatch(removeBook(bookId));
+    dispatch(removeBookFromAPI(bookId));
   };
 
   return (
