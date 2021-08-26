@@ -22,7 +22,6 @@ html {
 
 body {
   font-size: 1.6rem;
-  font-family: $font-family;
   color: rgb(0, 0, 0);
   background-color: $bg-color;
   -webkit-font-smoothing: antialiased;
@@ -39,8 +38,6 @@ a:hover {
 }
 
 button {
-  padding: 0.8rem 2rem;
-  font-size: 2rem;
   border: none;
   cursor: pointer;
   background-color: $primary;
@@ -51,3 +48,21 @@ button {
   max-width: 1200px;
   margin: 3rem auto;
 }
+
+/*
+  ========================
+
+  Media Queries
+
+  ========================
+*/
+
+/* Large devices (laptops/desktops, 769px and up) */
+
+@media only screen and (min-width: 769px) {
+  html {
+    box-sizing: border-box;
+    font-size: 100%;
+  }
+}
+

@@ -84,9 +84,9 @@ const reducer = (state = initialState, action) => {
               category: action.payload[key][0].category,
             },
             progress: {
-              chapterNumber: null,
-              chapterTitle: null,
-              completion: 0,
+              chapterNumber: 1,
+              chapterTitle: 'not specified',
+              completion: 0.5,
             },
           }
         )),

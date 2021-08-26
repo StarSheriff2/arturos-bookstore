@@ -1,21 +1,26 @@
 @import '../abstracts/fonts';
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
 
 h1 {
-  font: italic bold 5rem $font-family;
+  font: italic bold 5rem arial;
+
+  color: aquamarine;
 }
 
 h2 {
-  font: 500 3rem $font-family;
+  font: 500 3rem arial;
 }
 
 h3 {
-  font: 500 2rem $font-family;
+  @include font(normal, normal, bold, 1.375rem/normal);
+
+  color: $black-two;
+  letter-spacing: -0.02px;
 }
 
 h4 {
-  font: 1.6rem $font-family;
-}
+  @include font(normal, normal, 300, 0.875rem/normal);
 
-p {
-  font: 400 1rem $font-family;
+  color: $pale-blue;
 }
