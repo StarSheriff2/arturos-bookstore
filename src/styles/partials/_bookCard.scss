@@ -1,33 +1,98 @@
+@import '../abstracts/fonts';
 @import '../abstracts/mixins';
 @import '../abstracts/variables';
 
 .book-card {
   display: grid;
   align-items: center;
+  justify-content: center;
   background-color: $white;
-  border: $primary solid 2px;
-  padding: 1rem;
+  border: $primary-border-color solid 2px;
+  padding: 20px;
 
   &__progress-graph-container {
-    @include d-flex(row, flex-start, center);
+    @include d-flex(row, flex-start, flex-start);
+
+    height: 100%;
+
+    &__wrapper {
+      @include d-flex(row, flex-start, center);
+
+      margin-top: 20px;
+    }
+
+    &__progress-graph {
+      width: 80px;
+      margin-right: 20px;
+    }
 
     &__progress-percentage {
       @include d-flex(column, center, flex-start);
+
+      &__completion {
+        @include font(normal, normal, normal, 2rem/normal, $montserrat-font-family);
+
+        color: $black-two;
+      }
+
+      &__progress-status {
+        @include font(normal, normal, normal, 0.875rem/normal, $montserrat-font-family);
+
+        opacity: 0.5;
+        color: $black-two;
+      }
     }
+  }
+
+  &__progress-graph-container::after {
+    content: '';
+    border: $primary-border-color 1px solid;
+    height: 4rem;
+    margin: 0 3rem;
+    align-self: center;
   }
 
   &__progress-controller {
     display: grid;
     justify-items: flex-start;
+    padding: 0;
+
+    &__current-chapter-caption {
+      @include font(normal, normal, 300, 0.813rem/normal);
+
+      opacity: 0.5;
+      color: $black-two;
+    }
+
+    &__current-chapter {
+      @include font(normal, normal, 300, 1rem/normal);
+
+      color: $black-two;
+      margin-top: 0.4rem;
+      letter-spacing: -0.4px;
+    }
 
     &__btn {
-      margin: 1rem 0;
+      @include font(normal, normal, 300, 0.813rem/normal);
+
+      margin: 20px 0 0 0;
+      letter-spacing: 0.5px;
+      padding: 10px 30px;
     }
   }
 }
 
 .book {
   padding: 1rem 0;
+
+  &__category {
+    @include font(normal, normal, bold, 0.875rem/normal, $montserrat-font-family);
+
+    text-transform: capitalize;
+    opacity: 0.5;
+    color: $black-two;
+    letter-spacing: -0.02px;
+  }
 }
 
 .book-actions {
@@ -39,9 +104,9 @@
     }
 
     &:nth-child(2) {
-      padding: 0.8rem calc(1rem + 2px);
-      border-left: green 2px solid;
-      border-right: green 2px solid;
+      padding: 0.3rem calc(1rem + 1px);
+      border-left: $primary-border-color 1px solid;
+      border-right: $primary-border-color 1px solid;
     }
 
     &:nth-child(3) {
@@ -49,10 +114,11 @@
     }
 
     &__btn {
+      @include font(normal, normal, 300, 0.875rem/normal);
+
+      color: $pale-blue;
       background-color: transparent;
-      color: green;
       padding: 0;
-      font-size: 1.4rem;
     }
   }
 }
@@ -74,7 +140,6 @@
 @media only screen and (min-width: 769px) {
   .book-card {
     grid-template-columns: 5fr 2fr 3fr;
-    align-items: center;
-    padding: 1rem;
+    padding: 14px 30px;
   }
 }

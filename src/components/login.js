@@ -1,7 +1,7 @@
 const Login = () => (
-  <div className="profile-btn">
-    Profile
-  </div>
+  <button type="button" className="profile-btn">
+    <i className="fas fa-user" />
+  </button>
 );
 
 export default Login;

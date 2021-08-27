@@ -1,7 +1,38 @@
-.navbar__links {
-  @include d-flex(row, space-between, center);
+@import '../abstracts/fonts';
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
 
-  &__li {
-    margin-right: 2rem;
+.navbar {
+  display: none;
+
+  &__links {
+    @include d-flex(row, space-between, center);
+
+    &__li {
+      @include font(normal, normal, normal, 0.813rem/normal, $montserrat-font-family);
+
+      margin-right: 2rem;
+      color: $black-two;
+
+      &__link {
+        letter-spacing: 1.9px;
+      }
+    }
+  }
+}
+
+/*
+  ========================
+
+  Media Queries
+
+  ========================
+*/
+
+/* Large devices (laptops/desktops, 769px and up) */
+
+@media only screen and (min-width: 769px) {
+  .navbar {
+    display: block;
   }
 }

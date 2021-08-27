@@ -34,8 +34,8 @@ const ProgressController = (props) => {
 
 ProgressController.defaultProps = {
   progress: {
-    chapterNumber: null,
-    chapterTitle: null,
+    chapterNumber: 1,
+    chapterTitle: 'not specified',
   },
 };
 

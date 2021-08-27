@@ -3,14 +3,29 @@
 @import './navbar';
 
 .header {
-  background-color: $primary;
+  background-color: $white;
 
   &__sub-container {
     @include d-flex(row, space-between, center);
 
-    max-width: 1600px;
+    max-width: 1100px;
     margin: 0 auto;
     color: $white;
     padding: 2rem;
+
+    &__navbar-wrapper {
+      @include d-flex(row, flex-start, center);
+    }
+
+    &__logo {
+      margin-right: 3rem;
+
+      &__btn {
+        @include font(normal, normal, bold, 1.875rem/normal, $montserrat-font-family);
+
+        color: $primary;
+        background-color: transparent;
+      }
+    }
   }
 }
