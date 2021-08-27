@@ -4,6 +4,7 @@
 
 .header {
   background-color: $white;
+  border-bottom: $primary-border-color 1px solid;
 
   &__sub-container {
     @include d-flex(row, space-between, center);

@@ -78,6 +78,10 @@
       margin: 20px 0 0 0;
       letter-spacing: 0.5px;
       padding: 10px 30px;
+
+      &:hover {
+        background-color: $medium-blue;
+      }
     }
   }
 }
@@ -119,6 +123,10 @@
       color: $pale-blue;
       background-color: transparent;
       padding: 0;
+
+      &:hover {
+        color: $primary;
+      }
     }
   }
 }
@@ -141,5 +149,9 @@
   .book-card {
     grid-template-columns: 5fr 2fr 3fr;
     padding: 14px 30px;
+
+    &:hover {
+      border: solid 2px $primary;
+    }
   }
 }

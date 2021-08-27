@@ -13,12 +13,25 @@
 
       margin-right: 2rem;
       color: $black-two;
+      opacity: 0.5;
+      transition: all 0.05s ease-out;
+
+      &:hover {
+        transition: all 0.05s ease-in;
+        color: $primary;
+        opacity: 1;
+      }
 
       &__link {
         letter-spacing: 1.9px;
+        opacity: inherit;
       }
     }
   }
+}
+
+.active-link {
+  opacity: 1;
 }
 
 /*
