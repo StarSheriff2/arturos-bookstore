@@ -32,9 +32,7 @@ The app stores its data in a public API located here: https://us-central1-bookst
 ### Features:
 - Add a book
 - Remove a book
-- Edit a book
-- Log reading progress
-- Classify books by Category
+
 ### Live Demo
 
 Deployed to Netlify: [Live Demo](https://cranky-blackwell-62472b.netlify.app)
@@ -134,7 +132,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ## Usage
 
 - Add any book to the bookstore
-- Keep track of your progress
+- Remove a book from the booklist
 
 ## Author
 👤 **Arturo Alvarez**
