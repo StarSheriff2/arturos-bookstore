@@ -34,7 +34,7 @@ const Bookstore = () => {
         </ul>
       </section>
       <section className="add-book-section page-section">
-        <hr />
+        <hr className="add-book-section__hr d-none" />
         <h2>Add New Book</h2>
         <AddBookForm />
       </section>

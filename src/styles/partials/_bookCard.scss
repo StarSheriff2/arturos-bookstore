@@ -3,9 +3,11 @@
 @import '../abstracts/variables';
 
 .book-card {
+  height: 75vh;
   display: grid;
   align-items: center;
   justify-content: center;
+  justify-items: center;
   background-color: $white;
   border: $primary-border-color solid 2px;
   padding: 20px;
@@ -44,17 +46,9 @@
     }
   }
 
-  &__progress-graph-container::after {
-    content: '';
-    border: $primary-border-color 1px solid;
-    height: 4rem;
-    margin: 0 3rem;
-    align-self: center;
-  }
-
   &__progress-controller {
     display: grid;
-    justify-items: flex-start;
+    justify-items: center;
     padding: 0;
 
     &__current-chapter-caption {
@@ -87,6 +81,8 @@
 }
 
 .book {
+  @include d-flex(column, center, center);
+
   padding: 1rem 0;
 
   &__category {
@@ -147,11 +143,29 @@
 
 @media only screen and (min-width: 769px) {
   .book-card {
+    height: auto;
     grid-template-columns: 5fr 2fr 3fr;
     padding: 14px 30px;
+    justify-items: normal;
 
     &:hover {
       border: solid 2px $primary;
     }
+
+    &__progress-graph-container::after {
+      content: '';
+      border: $primary-border-color 1px solid;
+      height: 4rem;
+      margin: 0 3rem;
+      align-self: center;
+    }
+
+    &__progress-controller {
+      justify-items: flex-start;
+    }
+  }
+
+  .book {
+    display: block;
   }
 }
