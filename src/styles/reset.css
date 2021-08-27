@@ -44,3 +44,10 @@ table {
 	border-collapse: collapse;
 	border-spacing: 0;
 }
+select {
+	border:none;
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	-ms-appearance: none; /* get rid of default appearance for IE8, 9 and 10*/
+}

@@ -3,22 +3,35 @@
   grid-template-columns: 5fr 4fr 2fr 1fr;
   grid-gap: 2.5rem;
   align-items: stretch;
-  padding: 2rem;
+  padding: 2rem 0;
 
-  & input,
+  & input {
+    font-size: 1rem;
+    border: solid 1px $primary-border-color;
+    background-color: $white;
+    border-radius: 4px;
+    padding-left: 0.8rem;
+
+    &[type="text"]::placeholder {
+      @include font(normal, normal, normal, 1rem/normal, $montserrat-font-family);
+
+      color: $pinkish-grey;
+      letter-spacing: -0.15px;
+    }
+  }
+
   &__dropdown {
     font-size: 1rem;
     border: solid 1px $primary-border-color;
     background-color: $white;
     border-radius: 4px;
-
-    &[type="text"]::placeholder {
-      @include font(normal, normal, normal, 1rem/normal, $montserrat-font-family);
-
-      padding-left: 0.8rem;
-      color: $pinkish-grey;
-      letter-spacing: -0.15px;
-    }
+    color: $pinkish-grey;
+    padding-left: 0.8rem;
+    letter-spacing: -0.15px;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='lightgray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 5px;
   }
 
   &__submit {
@@ -27,7 +40,7 @@
     white-space: nowrap;
     letter-spacing: 0.5px;
     text-align: center;
-    padding: 10px 50px;
+    padding: 15px 60px;
     text-transform: uppercase;
   }
 }
