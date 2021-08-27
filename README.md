@@ -1,19 +1,27 @@
-# Arturo's Bookstore
+<div align="center">
+<h1>Arturo's Bookstore</h1>
+</div>
 
-![](https://img.shields.io/badge/Microverse-blueviolet)
-![](https://img.shields.io/badge/Academic-blue)
-![](https://img.shields.io/badge/HTML-red)
-![](https://img.shields.io/badge/JavaScript-yellow)
-![](https://img.shields.io/badge/CSS-blue)
-![](https://img.shields.io/badge/React-purple)
-![](https://img.shields.io/badge/Redux-violet)
+<div align="center">
+  <img src="https://img.shields.io/badge/Microverse-blueviolet">
+  <img src="https://img.shields.io/badge/Academic-blue">
+  <img src="https://img.shields.io/badge/Academic-blue">
+  <img src="https://img.shields.io/badge/HTML-red">
+  <img src="https://img.shields.io/badge/JavaScript-yellow">
+  <img src="https://img.shields.io/badge/CSS-blue">
+  <img src="https://img.shields.io/badge/React-purple">
+  <img src="https://img.shields.io/badge/Redux-violet">
+</div>
 
+<br>
 
-This is a Reading List tracker I built with React and Redux. It was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">This is a Reading List tracker I built with React and Redux. It was bootstrapped with https://github.com/facebook/create-react-app.</p>
+
+<br>
 
 <img width="1280" alt="app screenshot" src="./.github/images/app_screenshot.png">
 
-<div style="text-align:center"><img width="40%" alt="app screenshot mobile" src="./.github/images/app_screenshot_mob.png">
+<div align="center"><img width="40%" alt="app screenshot mobile" src="./.github/images/app_screenshot_mob.png">
 </div>
 
 ## About
