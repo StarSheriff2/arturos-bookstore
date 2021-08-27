@@ -1,28 +1,15 @@
 import PropTypes from 'prop-types';
-import { Doughnut } from 'react-chartjs-2';
+import DoughnutChart from './doughnutChart';
 
 const ProgressGraph = (props) => {
   const { progress } = props;
   const { completion } = progress;
 
-  const state = {
-    datasets: [
-      {
-        backgroundColor: ['#379cf6', '#f5f6fa'],
-        hoverBackgroundColor: ['#4386bf', '#888'],
-        data: [(completion * 100), ((1 - completion) * 100)],
-      },
-    ],
-  };
-
   return (
     <>
       <div className="book-card__progress-graph-container__wrapper">
         <div className="book-card__progress-graph-container__progress-graph">
-          <Doughnut
-            data={state}
-            options={{ maintainAspectRatio: true }}
-          />
+          <DoughnutChart completion={completion} />
         </div>
         <div className="book-card__progress-graph-container__progress-percentage">
           <span className="book-card__progress-graph-container__progress-percentage__completion">{`${Math.trunc(completion * 100)}%`}</span>
