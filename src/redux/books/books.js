@@ -80,13 +80,13 @@ const reducer = (state = initialState, action) => {
             titleInfo: {
               id: key,
               title: action.payload[key][0].title,
-              author: null,
+              author: 'unknown',
               category: action.payload[key][0].category,
             },
             progress: {
               chapterNumber: 1,
               chapterTitle: 'not specified',
-              completion: 0.5,
+              completion: 0.65,
             },
           }
         )),

@@ -7,10 +7,23 @@
   align-items: center;
   background-color: $white;
   border: $primary-border-color solid 2px;
-  padding: 1rem;
+  padding: 20px;
 
   &__progress-graph-container {
-    @include d-flex(row, flex-start, center);
+    @include d-flex(row, flex-start, flex-start);
+
+    height: 100%;
+
+    &__wrapper {
+      @include d-flex(row, flex-start, flex-start);
+
+      margin-top: 20px;
+    }
+
+    &__progress-graph {
+      width: 80px;
+      margin-right: 20px;
+    }
 
     &__progress-percentage {
       @include d-flex(column, center, flex-start);
@@ -30,9 +43,18 @@
     }
   }
 
+  &__progress-graph-container::after {
+    content: '';
+    border: $primary-border-color 1px solid;
+    height: 4rem;
+    margin: 0 3rem;
+    align-self: center;
+  }
+
   &__progress-controller {
     display: grid;
     justify-items: flex-start;
+    padding: 0;
 
     &__current-chapter-caption {
       @include font(normal, normal, 300, 0.813rem/normal);
@@ -45,15 +67,16 @@
       @include font(normal, normal, 300, 1rem/normal);
 
       color: $black-two;
+      margin-top: 0.4rem;
       letter-spacing: -0.4px;
     }
 
     &__btn {
       @include font(normal, normal, 300, 0.813rem/normal);
 
-      margin: 1.5rem 0;
+      margin: 20px 0 0 0;
       letter-spacing: 0.5px;
-      padding: 0.5rem 1.8rem;
+      padding: 10px 30px;
     }
   }
 }
@@ -116,7 +139,6 @@
 @media only screen and (min-width: 769px) {
   .book-card {
     grid-template-columns: 5fr 2fr 3fr;
-    align-items: center;
-    padding: 1rem;
+    padding: 14px 30px;
   }
 }

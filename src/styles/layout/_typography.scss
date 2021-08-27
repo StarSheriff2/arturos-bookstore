@@ -3,13 +3,12 @@
 @import '../abstracts/variables';
 
 h1 {
-  font: italic bold 5rem arial;
-
+  font: italic bold 5rem $montserrat-font-family;
   color: aquamarine;
 }
 
 h2 {
-  font: 500 3rem arial;
+  font: 500 3rem $montserrat-font-family;
 }
 
 h3 {
