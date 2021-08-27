@@ -11,8 +11,13 @@
 
 This is a Reading List tracker I built with React and Redux. It was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+<img width="1280" alt="app_screenshot" src="">
+
 ## About
 In this app users are able to make a reading list and keep track of their progress.
+
+The app stores its data in a public API located here: https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/. I used **Redux's thunk middleware** to handle all API calls.
+
 ### Features:
 - Add a book
 - Remove a book
