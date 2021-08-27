@@ -154,4 +154,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](https://github.com/StarSheriff2/arturos-bookstore/blob/main/LICENSE) licensed.
+This project is [MIT](https://github.com/StarSheriff2/arturos-bookstore/blob/development/LICENSE) licensed.
