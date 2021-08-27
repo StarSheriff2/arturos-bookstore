@@ -84,9 +84,9 @@ const reducer = (state = initialState, action) => {
               category: action.payload[key][0].category,
             },
             progress: {
-              chapterNumber: 1,
-              chapterTitle: 'not specified',
-              completion: 0.65,
+              chapterNumber: Math.floor(Math.random() * 10),
+              chapterTitle: null,
+              completion: Math.floor(Math.random() * 100) / 100,
             },
           }
         )),

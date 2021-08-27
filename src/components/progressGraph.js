@@ -25,7 +25,7 @@ const ProgressGraph = (props) => {
           />
         </div>
         <div className="book-card__progress-graph-container__progress-percentage">
-          <span className="book-card__progress-graph-container__progress-percentage__completion">{`${(completion * 100)}%`}</span>
+          <span className="book-card__progress-graph-container__progress-percentage__completion">{`${Math.trunc(completion * 100)}%`}</span>
           <span className="book-card__progress-graph-container__progress-percentage__progress-status">Completed</span>
         </div>
       </div>
