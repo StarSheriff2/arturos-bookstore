@@ -19,6 +19,13 @@
 
     &__logo {
       margin-right: 3rem;
+
+      &__btn {
+        @include font(normal, normal, bold, 1.875rem/normal, $montserrat-font-family);
+
+        color: $primary;
+        background-color: transparent;
+      }
     }
   }
 }

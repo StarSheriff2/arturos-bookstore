@@ -2,12 +2,6 @@
 @import '../abstracts/mixins';
 @import '../abstracts/variables';
 
-h1 {
-  @include font(normal, normal, bold, 1.875rem/normal, $montserrat-font-family);
-
-  color: $primary;
-}
-
 h2 {
   @include font(normal, normal, bold, 1.25rem/normal, $montserrat-font-family);
 
