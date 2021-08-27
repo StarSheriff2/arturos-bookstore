@@ -11,7 +11,7 @@
 
 This is a Reading List tracker I built with React and Redux. It was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-<img width="1280" alt="app_screenshot" src="">
+<img width="1280" alt="app_screenshot" src="./.github/images/app_screenshot.png">
 
 ## About
 In this app users are able to make a reading list and keep track of their progress.
