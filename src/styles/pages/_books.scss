@@ -1,0 +1,28 @@
+@import '../abstracts/mixins';
+@import '../abstracts/variables';
+@import '../partials/header';
+@import '../partials/login';
+@import '../partials/bookCard';
+@import '../partials/addBookForm';
+
+.bookList {
+  display: grid;
+  grid-auto-rows: auto;
+  grid-gap: 1.4rem;
+}
+
+/*
+  ========================
+
+  Media Queries
+
+  ========================
+*/
+
+/* Large devices (laptops/desktops, 769px and up) */
+
+@media only screen and (min-width: 769px) {
+  .add-book-section__hr {
+    display: block;
+  }
+}

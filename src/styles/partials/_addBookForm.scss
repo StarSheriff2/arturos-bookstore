@@ -1,0 +1,84 @@
+.add-book-form {
+  display: grid;
+  grid-gap: 2.5rem;
+  align-items: stretch;
+  padding: 2rem 0;
+
+  & input {
+    font-size: 1rem;
+    border: solid 1px $primary-border-color;
+    background-color: $white;
+    border-radius: 4px;
+    padding-left: 0.8rem;
+    height: 50px;
+
+    &:hover {
+      border: solid 1px $primary;
+    }
+
+    &[type="text"]::placeholder {
+      @include font(normal, normal, normal, 1rem/normal, $montserrat-font-family);
+
+      color: $pinkish-grey;
+      letter-spacing: -0.15px;
+
+      &:hover {
+        color: $black;
+      }
+    }
+  }
+
+  &__dropdown {
+    font-size: 1rem;
+    border: solid 1px $primary-border-color;
+    background-color: $white;
+    border-radius: 4px;
+    color: $pinkish-grey;
+    padding-left: 0.8rem;
+    letter-spacing: -0.15px;
+    background-image: url("data:image/svg+xml;utf8,<svg fill='lightgray' height='24' viewBox='0 0 24 24' width='24' xmlns='http://www.w3.org/2000/svg'><path d='M7 10l5 5 5-5z'/><path d='M0 0h24v24H0z' fill='none'/></svg>");
+    background-repeat: no-repeat;
+    background-position-x: 100%;
+    background-position-y: 50%;
+    height: 50px;
+
+    &:hover {
+      border: solid 1px $primary;
+    }
+  }
+
+  &__submit {
+    @include font(normal, normal, bold, 0.813rem/normal, $roboto-slab-font-family);
+
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding: 15px 60px;
+    text-transform: uppercase;
+
+    &:hover {
+      background-color: $medium-blue;
+    }
+  }
+}
+
+/*
+  ========================
+
+  Media Queries
+
+  ========================
+*/
+
+/* Large devices (laptops/desktops, 769px and up) */
+
+@media only screen and (min-width: 769px) {
+  .add-book-form {
+    grid-template-columns: 5fr 4fr 2fr 1fr;
+
+    & input,
+    &__dropdown {
+      height: initial;
+    }
+  }
+}

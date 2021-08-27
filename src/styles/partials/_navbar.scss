@@ -1,0 +1,51 @@
+@import '../abstracts/fonts';
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
+.navbar {
+  display: none;
+
+  &__links {
+    @include d-flex(row, space-between, center);
+
+    &__li {
+      @include font(normal, normal, normal, 0.813rem/normal, $montserrat-font-family);
+
+      margin-right: 2rem;
+      color: $black-two;
+      opacity: 0.5;
+      transition: all 0.05s ease-out;
+
+      &:hover {
+        transition: all 0.05s ease-in;
+        color: $primary;
+        opacity: 1;
+      }
+
+      &__link {
+        letter-spacing: 1.9px;
+        opacity: inherit;
+      }
+    }
+  }
+}
+
+.active-link {
+  opacity: 1;
+}
+
+/*
+  ========================
+
+  Media Queries
+
+  ========================
+*/
+
+/* Large devices (laptops/desktops, 769px and up) */
+
+@media only screen and (min-width: 769px) {
+  .navbar {
+    display: block;
+  }
+}
