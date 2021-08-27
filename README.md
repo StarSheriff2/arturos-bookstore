@@ -32,11 +32,10 @@ The app stores its data in a public API located here: https://us-central1-bookst
 ### Features:
 - Add a book
 - Remove a book
-- Edit a book
-- Log reading progress
-- Classify books by Category
+
 ### Live Demo
-This site will deployed to Heroku and Netlify once it's production ready.
+
+Deployed to Netlify: [Live Demo](https://cranky-blackwell-62472b.netlify.app)
 
 ### Built With
 - HTML, CSS, JS
@@ -133,7 +132,7 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ## Usage
 
 - Add any book to the bookstore
-- Keep track of your progress
+- Remove a book from the booklist
 
 ## Author
 👤 **Arturo Alvarez**
@@ -155,4 +154,4 @@ Give a ⭐️ if you like this project!
 
 ## 📝 License
 
-This project is [MIT](https://github.com/StarSheriff2/arturos-bookstore/blob/main/LICENSE) licensed.
+This project is [MIT](https://github.com/StarSheriff2/arturos-bookstore/blob/development/LICENSE) licensed.
