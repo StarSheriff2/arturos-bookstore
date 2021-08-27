@@ -36,7 +36,8 @@ The app stores its data in a public API located here: https://us-central1-bookst
 - Log reading progress
 - Classify books by Category
 ### Live Demo
-This site will deployed to Heroku and Netlify once it's production ready.
+
+Deployed to Netlify: [Live Demo](https://cranky-blackwell-62472b.netlify.app)
 
 ### Built With
 - HTML, CSS, JS
