@@ -22,9 +22,9 @@ const AddBookForm = () => {
         category,
       },
       progress: {
-        chapterNumber: null,
+        chapterNumber: Math.floor(Math.random() * 10),
         chapterTitle: null,
-        completion: 0,
+        completion: Math.floor(Math.random() * 100) / 100,
       },
     };
 
