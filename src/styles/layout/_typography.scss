@@ -3,13 +3,17 @@
 @import '../abstracts/variables';
 
 h1 {
-  @include font(normal, normal, bold,  1.875rem/normal, $montserrat-font-family);
+  @include font(normal, normal, bold, 1.875rem/normal, $montserrat-font-family);
 
   color: $primary;
 }
 
 h2 {
-  font: 500 3rem $montserrat-font-family;
+  @include font(normal, normal, bold, 1.25rem/normal, $montserrat-font-family);
+
+  letter-spacing: -0.18px;
+  text-transform: uppercase;
+  color: $warm-grey;
 }
 
 h3 {

@@ -1,16 +1,33 @@
 .add-book-form {
   display: grid;
-  grid-template-columns: 3fr 2fr 2fr 1fr;
-  grid-gap: 3rem;
+  grid-template-columns: 5fr 4fr 2fr 1fr;
+  grid-gap: 2.5rem;
   align-items: stretch;
-  border: blue solid 2px;
   padding: 2rem;
 
-  & input[type=text] {
-    font-size: 2rem;
+  & input,
+  &__dropdown {
+    font-size: 1rem;
+    border: solid 1px $primary-border-color;
+    background-color: $white;
+    border-radius: 4px;
+
+    &[type="text"]::placeholder {
+      @include font(normal, normal, normal, 1rem/normal, $montserrat-font-family);
+
+      padding-left: 0.8rem;
+      color: $pinkish-grey;
+      letter-spacing: -0.15px;
+    }
   }
 
-  &__dropdown {
-    height: 100%;
+  &__submit {
+    @include font(normal, normal, bold, 0.813rem/normal, $roboto-slab-font-family);
+
+    white-space: nowrap;
+    letter-spacing: 0.5px;
+    text-align: center;
+    padding: 10px 50px;
+    text-transform: uppercase;
   }
 }
