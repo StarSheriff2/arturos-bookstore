@@ -3,8 +3,9 @@
 @import '../abstracts/variables';
 
 h1 {
-  font: italic bold 5rem $montserrat-font-family;
-  color: aquamarine;
+  @include font(normal, normal, bold,  1.875rem/normal, $montserrat-font-family);
+
+  color: $primary;
 }
 
 h2 {

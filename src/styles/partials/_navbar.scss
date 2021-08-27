@@ -1,7 +1,18 @@
+@import '../abstracts/fonts';
+@import '../abstracts/variables';
+@import '../abstracts/mixins';
+
 .navbar__links {
   @include d-flex(row, space-between, center);
 
   &__li {
+    @include font(normal, normal, normal, 0.813rem/normal, $montserrat-font-family);
+
     margin-right: 2rem;
+    color: $black-two;
+
+    &__link {
+      letter-spacing: 1.9px;
+    }
   }
 }
