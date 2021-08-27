@@ -5,6 +5,7 @@
 .book-card {
   display: grid;
   align-items: center;
+  justify-content: center;
   background-color: $white;
   border: $primary-border-color solid 2px;
   padding: 20px;

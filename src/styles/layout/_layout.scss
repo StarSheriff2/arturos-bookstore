@@ -17,7 +17,7 @@ li {
 
 html {
   box-sizing: border-box;
-  font-size: 62.5%;
+  font-size: 100%;
 }
 
 body {
@@ -53,6 +53,7 @@ hr {
 .page-section {
   max-width: 1100px;
   margin: 2.8rem auto;
+  padding: 0 1rem;
 }
 
 /*
@@ -66,8 +67,7 @@ hr {
 /* Large devices (laptops/desktops, 769px and up) */
 
 @media only screen and (min-width: 769px) {
-  html {
-    box-sizing: border-box;
-    font-size: 100%;
+  .page-section {
+    padding: 0;
   }
 }

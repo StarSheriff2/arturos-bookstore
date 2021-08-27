@@ -1,6 +1,5 @@
 .add-book-form {
   display: grid;
-  grid-template-columns: 5fr 4fr 2fr 1fr;
   grid-gap: 2.5rem;
   align-items: stretch;
   padding: 2rem 0;
@@ -11,6 +10,7 @@
     background-color: $white;
     border-radius: 4px;
     padding-left: 0.8rem;
+    height: 50px;
 
     &[type="text"]::placeholder {
       @include font(normal, normal, normal, 1rem/normal, $montserrat-font-family);
@@ -32,6 +32,7 @@
     background-repeat: no-repeat;
     background-position-x: 100%;
     background-position-y: 50%;
+    height: 50px;
   }
 
   &__submit {
@@ -42,5 +43,26 @@
     text-align: center;
     padding: 15px 60px;
     text-transform: uppercase;
+  }
+}
+
+/*
+  ========================
+
+  Media Queries
+
+  ========================
+*/
+
+/* Large devices (laptops/desktops, 769px and up) */
+
+@media only screen and (min-width: 769px) {
+  .add-book-form {
+    grid-template-columns: 5fr 4fr 2fr 1fr;
+
+    & input,
+    &__dropdown {
+      height: initial;
+    }
   }
 }
