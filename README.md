@@ -5,10 +5,10 @@
 <div align="center">
   <img src="https://img.shields.io/badge/Microverse-blueviolet">
   <img src="https://img.shields.io/badge/Academic-blue">
-  <img src="https://img.shields.io/badge/Academic-blue">
   <img src="https://img.shields.io/badge/HTML-red">
   <img src="https://img.shields.io/badge/JavaScript-yellow">
   <img src="https://img.shields.io/badge/CSS-blue">
+  <img src="https://img.shields.io/badge/SASS-pink">
   <img src="https://img.shields.io/badge/React-purple">
   <img src="https://img.shields.io/badge/Redux-violet">
 </div>
@@ -25,7 +25,7 @@
 </div>
 
 ## About
-In this app users are able to make a reading list and keep track of their progress.
+In this app users are able to make a reading list by adding and removing books they are currently reading.
 
 The app stores its data in a public API located here: https://us-central1-bookstore-api-e63c8.cloudfunctions.net/bookstoreApi/. I used **Redux's thunk middleware** to handle all API calls.
 
@@ -38,14 +38,20 @@ The app stores its data in a public API located here: https://us-central1-bookst
 Deployed to Netlify: [Live Demo](https://cranky-blackwell-62472b.netlify.app)
 
 ### Built With
-- HTML, CSS, JS
+- HTML, CSS, JavaScript
+- sass 1.38.0
 - NPM 7.18.1
 - prop-types 15.7.2
 - react 17.0.2
 - react-redux 7.2.4
+- react-router-dom 5.2.0
+- chart.js 3.5.1
+- redux-logger 3.0.6
+- redux-thunk 2.3.0
+- uuid 3.4.0
+- prop-types 15.7.2
+- react-devtools 4.16.0
 - Jest-dom 5.11.4
-- gh-pages 3.2.3
-- Heroku
 - Netlify
 - Linters: ESLint, Stylint
 - VS Code
